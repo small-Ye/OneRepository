@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+        // 1. 让用户输入一个三位数【整数】，使用代码分别获取到这个三位数字百位，十位，个位上的数字。
+
+        // var ThreeInteger = parseInt(prompt('请输入三位整数'));
+        // var Hundred, Decade, unitsDigit
+        // Hundred = parseInt(ThreeInteger / 100);
+        // Decade = parseInt((parseInt(ThreeInteger % 100)) / 10);
+        // unitsDigit = parseInt(ThreeInteger % 100) % 10;
+        // alert('百位:' + Hundred + '   十位:' + Decade + '   个位:' + unitsDigit)
+
+        // 2. 用户任意输入一个三位数，求这个三位数字百位，十位，个位之和。
+        // var num = Hundred + Decade + unitsDigit;
+        // alert('输入的三位数的和: ' + num)
+
+        // 3. 如果今天是周六，那么100天以后是周几？
+
+        // var WhatDay = prompt('请输入天数') % 7 ;
+
+        // switch (WhatDay) {
+        //     case 1 : alert('星期日')
+        //     break;
+        //     case 2 : alert('星期一')
+        //     break;
+        //     case 3 : alert('星期二')
+        //     break;
+        //     case 4 : alert('星期三')
+        //     break;
+        //     case 5 : alert('星期四')
+        //     break;
+        //     case 6 : alert('星期五')
+        //     break;
+        //     case 0 : alert('星期六')
+
+        // }
+
+        // 4.写一个程序，要求用户输入鸡蛋数，如果20个鸡蛋放一盒，判断要多少个盒子。
+        //   var EggNumber = prompt('输入鸡蛋个数')
+        //   var EggNumberOne = parseInt(EggNumber/20)
+        //   var EggNumbers =  EggNumber%20
+
+        //   if(EggNumbers === 0) {
+        //        EggNumberOne = EggNumberOne + 0;
+        //   }else {
+        //     EggNumberOne = EggNumberOne + 1;
+        //   };
+        //   alert('需要的盒子' + EggNumberOne)
+        // 5. 接收用户输入两个数字，求两个数的最大数。【排除非法输入】
+
+        // var OneNumber = Number(prompt('请输入第一个数字'))
+        // var TwoNumber = Number(prompt('请输入第二个数字'))
+        // if(isNaN(OneNumber) ||isNaN(TwoNumber) ) {
+        //    alert('请输入数字')
+        // }else if (OneNumber > TwoNumber) {
+        //   alert('最大值为' + OneNumber)
+        // }else if(OneNumber < TwoNumber){
+        //     alert('最大值为' + TwoNumber)
+        // }else {
+        //     alert('值相等')
+        // }
+        // 6. 接收用户输入一个数字，判断一个数是偶数还是奇数【将非法输入考虑进去】
+        //   var NumberS = Number(prompt('请输入数字'))
+        //   if(isNaN(NumberS)){
+        //      alert('请输入数字')
+        //   }else {
+        //      if(NumberS%2) {
+        //          alert('是奇数')
+        //      }else {
+        //          alert('是偶数')
+        //      }
+        //   }
+        // 7. 当点击确定，弹出消息提示“您已退出” 当点击取消  弹出消息“您已取消退出”
+        // if(confirm('请选择')){
+        //     alert('您已退出')
+        // } else {
+        //   alert('您已经取消退出')
+        // }
+        // 8. 判断一个年份是闰年还是平年
+        // 闰年：能被4整除，但不能被100整除的年份 或者 能被400整除的年份
+
+        // 9. 依据一个人的年龄判断是否成年（大于18岁）
+        //    var Number = Number(prompt('请输入年龄'))
+
+        //     if(Number >= 18) {
+        //         alert('成年人')
+        //     }else {
+        //         alert('未成年')
+        //     }
+        // 10.一个加油站为了鼓励车主多加油，所以加的多有优惠。
+        // 92号汽油，每升6元；如果大于20升，那么超出部分每升5.9；
+        // 95号汽油，每升7元；如果大于30升，那么超出部分每升6.95
+        // 编写JS程序，用户输入自己的汽油编号，然后输入自己加多少升，弹出价格。
+
+        // var serialNumber = Number(prompt('请输入编号'));
+        // var WhantLitre = Number(prompt('请输入多少升汽油'));
+        // var Mony;
+        // if (serialNumber && WhantLitre) {
+        //     if (!serialNumber) {
+        //         alert('请输入油编号')
+        //     } else {
+        //         if (serialNumber === 92) {
+        //             if (WhantLitre <= 20) {
+        //                 Mony = 6 * WhantLitre
+        //                 alert(Mony)
+        //             } else {
+        //                 Mony = 20 * 6 + 5.9 * (WhantLitre - 20)
+        //                 alert(Mony)
+        //             }
+        //         } else if (serialNumber === 95) {
+        //             if (WhantLitre <= 30) {
+        //                 Mony = 7 * WhantLitre
+        //                 alert(Mony)
+        //             } else {
+        //                 Mony = 30 * 7 + 6.95 * (WhantLitre - 30)
+        //                 alert(Mony)
+        //             }
+        //         } else {
+        //             alert('目前开放92号和95号汽油,请重新选择')
+        //         }
+        //     }
+
+        // } else {
+        //     alert('请按提示输入')
+        // }
+
+        // 11.  收先接收用户输入的用户名，判断该用户名是否是admin, 如果不是直接程序终止，如果是那么再次提示让用户输入密码, 如果密码是88888, 那么提示登录成功，否则提示登录失败。
+        // var UserName = prompt('请输入用户名');
+        // var Password;
+        // if (UserName === 'admin') {
+        //     Password = prompt('请输入密码')
+        //     if (Password == 88888) {
+        //         alert('登录成功过')
+        //     } else {
+        //         alert('登录失败')
+        //     }
+        // }
+
+        // 12.分数转换，把百分制转换成ABCDE < 60  E  60 - 70 D  70 - 80 C  80 - 90 B  90 - 100 A
+
+        //   var NumberTo = Number(prompt('请输入分数'))
+
+        //    if  ( NumberTo < 60) {
+        //       alert('E')
+        //    }else if ( 60 <= NumberTo && NumberTo < 70) {
+        //        alert('D')
+        //    }else if ( 70 <= NumberTo && NumberTo <  80) {
+        //        alert('C')
+        //    }else if (80 <= NumberTo && NumberTo < 90) {
+        //        alert('B')
+        //    }else if (90 <= NumberTo && NumberTo <= 100) {
+        //     alert('A')
+        //    }
+        // 13.
+        // var a;
+        // var b = 6;
+        // a = ++b;
+        // console.log(a,b)
+        // 请问：a的值是多少，b的值是多少。  7   7
+        // a = b++;
+        // console.log(a,b)
+        // 请问：a的值是多少，b的值是多少。  7   8
+        // 14.
+        //  var a = 1; var b = ++a + ++a; console.log(b);     // 5
+        //  var a = 1; var b = a++ + ++a; console.log(b);     // 4
+        //  var a = 1; var b = a++ + a++; console.log(b);     // 3
+        //  var a = 1; var b = ++a + a++; console.log(b);     // 4
+        // 15: 从三个数字中找最大值
+        //     var OneNumber = Number(prompt('输入第一个数字'))
+        //     var TwoNumber = Number(prompt('输入第二个数字'))
+        //     var ThreeNumber = Number(prompt('输入第三个数字'))
+
+        //   if ((OneNumber > TwoNumber) && (OneNumber > ThreeNumber)) {
+        //       alert('最大值为' + OneNumber)
+        //   }else if ((OneNumber > TwoNumber) || (OneNumber > ThreeNumber)){
+        //         if((TwoNumber > OneNumber) && (TwoNumber > ThreeNumber)) {
+        //             alert('最大值为' + TwoNumber )
+        //         }else {
+        //            alert('最大值为' + ThreeNumber)
+        //         }
+        //   }else {
+        //     if((TwoNumber > OneNumber) && (TwoNumber > ThreeNumber)) {
+        //             alert('最大值为' + TwoNumber )
+        //         }else {
+        //            alert('最大值为' + ThreeNumber)
+        //         }
+        //   }
+
+        // 16: 根据用户输入月份，显示对应的季节（例如：3, 4, 5为春季）
+        //  var MonthNumber = Number(prompt('请输入月份'))
+        //  switch (MonthNumber) {
+        //        case 3: 
+        //        case 4: 
+        //        case 2: alert('春季')
+        //        break;
+        //        case 1:
+        //        case 11:
+        //        case 12: alert('冬季')
+        //        break;
+        //        case 5 :
+        //        case 6 :
+        //        case 7 : alert('夏季')
+        //        break;
+        //        case 8:
+        //        case 9:   
+        //        case 10:alert('秋季')  
+        //        break;               
+        //  }
+        // 17: 李四的年终工作评定, 如果定为A级, 则工资涨500元, 如果定为B级, 则工资涨200元, 如果定为C级, 工资不变, 如果	 定为D级工资降200元, 如果定为E级工资降500元.
+        //     设李四的原工资为5000, 请用户输入李四的评级, 然后显示李四来年的工资.
+
+        // var Rank = prompt('请输入职级')
+
+        // switch (Rank) {
+        //     case 'A': alert('5500');
+        //         break;
+        //     case 'B': alert('5200');
+        //         break;
+        //     case 'C': alert('5000');
+        //         break;
+        //     case 'D': alert('4800');
+        //         break;
+        //     case 'E': alert('4500');
+        //         break;
+        // }
+        // 18. 将 1 到 100 之间的所有数字输出到控制台中
+        // for( var i = 1 ;i <= 100; i++) {
+        //       console.log(i)
+        // }
+        // 19. 将1到100之间的所有是3的倍数找出来，在控制台中输出
+        // for (var i = 1 ;i <= 100; i++) {
+        //     if (i%3 === 0) {
+        //      console.log(i)
+        //     }
+        // }
+        // 20. 求1到100之间的数字和。在控制台中输出
+        // var num = 0 ;  
+        //  for ( var i = 1 ; i <= 100; i++ ) {
+        //         num += i 
+        //  }
+        //  console.log(num);
+        // 21. 首先接收用户输入用户名和密码，只要用户名不是admin或者密码不是888就一直提示要求重新输入, 如果正确则提登录成功.
+        //    var  UserName = prompt('请输入用户名');
+        //    var  Password = prompt('请输入用户名');
+        //    if ( UserName === 'admin' && Password === '888') {
+        //             alert('登录成功') 
+        //    }else {
+        //        alert('重新输入')
+        //    }
+        // 22. 请将1到50中所有的奇数并求和，在控制台中输出！
+        // var numAgg = 0;
+        // for (var i = 1; i <= 50; i++) {
+        //     if (!(i % 2)) {
+        //         numAgg += i;
+        //     }
+        // }
+        // alert(numAgg)
+        // 23. 在页面中打印两行10颗*
+
+        // for (var i = 0; i < 2; i++) {
+
+        //     for (var j = 0; j < 10; j++) {
+        //         document.write('*')
+        //     }
+        //     document.write('</br>')
+        // }
+
+        // 24. 打印直角三角形
+
+        //    for ( var i = 0 ; i < 10 ; i++) {
+        //      for ( var j = 0; j < i ; j++) {
+        //          document.write('*')
+        //         }
+        //         document.write('</br>')
+        //    }
+        // 25. 在页面中打印99乘法表
+
+        // for ( var i = 1 ; i < 10; i++ ) {
+        //      document.write('</br>')
+        //    for ( var j = 1 ; j <= i ; j++) {
+        //     document.write( j+'*'+i+'='+ i*j + ' ' )
+        //    }
+        // }
+
+        // 26.求整数1～100的累加值，要求跳过所有个位为3的数
+        // var num = 0;
+        // var num1 = 0;
+
+        // for (var i = 1; i <= 100; i++) {
+        //     if (!((i - 3) % 10 === 0)) {
+        //         num += i;
+        //     } else {
+        //         num1 += i;
+        //     }
+        // }
+        // alert(num)
+        // alert(num1)
+        // alert(num1 + num)
+        // 27.求整数1～100的累加值，要求碰到3的倍数则停止累加
+        // var num = 0;
+        // var number = 0;
+        // for (var i = 0; i <= 100; i++) {
+        //     if (!(i % 3)) {
+        //         num += i;
+        //     } else {
+        //         number += i;
+        //     }
+        // }
+        // console.log(num);
+        // console.log(number);
+        // console.log(num + number)
+
+        // 29.求任意个数中的最大值
+
+        // function test (ary) {
+        //     var maxArray = ary[0];
+
+        //     for (var i = 1; i < ary.length; i++) {
+        //         if (maxArray < ary[i]) {
+        //             maxArray = ary[i];
+        //         }
+        //     }
+        //     alert(maxArray);
+        // }
+
+        // test([1, 5, 3, 2, 7, 8, 10])
+        // 37
+        // var a = 1;
+        // function fn1() {
+        //     var a = 2;
+        //     function fn2() {
+        //         console.log(a);   // 2 
+        //     }
+        //     fn2()
+        // }
+
+        // 38
+        // 	function f1() {
+        //     var num = 123;
+        //     function f2() {
+        //         console.log(num);  // 123
+        //     }
+        //     f2();
+        // }
+        // var num = 456;
+        // f1();
+
+        // 39
+        // var a = 25;
+        // function abc() {
+        //     alert(a);
+        //     var a = 10;   // undefined
+        // }
+        // abc();
+        // 40.	
+        // var sum = 10;
+        // fun();
+        // function fun() {
+        //     console.log(num);   // undefined
+        //     var num = 20;
+        // }
+        // 求 n - m 之间的数字之和 
+        // function nm(n,m) {
+        //     var n;
+        //     var m;
+        //     var s ;
+        //     var num = 0;
+        //     if (n < m) {
+        //     }else {
+        //        s = n;
+        //        n = m;
+        //        m = s;  
+        //     }
+        //     for (var i = n; i < m + 1; i++) {
+        //            num += i  ;
+        //      }
+        //    return num;
+        // }
+        // console.log(nm(1,100));
+        // 将一个数组中所有偶数添加到一个新数组中返回，并计算新数组总和。
+        // 求 n 的阶乘
+        function n(n) {
+            var n;
+            var num = 1;
+            for (var i = 1; i < n + 1; i++) {
+                num *= i;
+            }
+            return nums;
+        }
+        console.log(n(5));
+        // 求1 - n之间每一个数字阶乘的和。
+        // 写一个函数，实现对数字数组的排序
+        // 写一个函数，判断是否是闰年【能被4整除且不能被100整除，或者能被400整除】
+        // 写一个函数，输入某年某月某日，判断这一天是一年中的第几天   1998  3   2
+    </script>
+</body>
+</html>
